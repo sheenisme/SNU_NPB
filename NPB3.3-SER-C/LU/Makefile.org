@@ -9,7 +9,7 @@ include ../sys/make.common
 
 OBJS = lu.o read_input.o \
        domain.o setcoeff.o setbv.o exact.o setiv.o \
-       erhs.o ssor$(VEC).amp_ppcg.o rhs$(VEC).o l2norm.o \
+       erhs.o ssor$(VEC).o rhs$(VEC).o l2norm.o \
        jacld.o blts$(VEC).o jacu.o buts$(VEC).o error.o auto2_verify.o \
        pintgr.o verify.o ${COMMON}/print_results.o \
        ${COMMON}/c_timers.o ${COMMON}/wtime.o
@@ -55,7 +55,7 @@ rhs$(VEC).o:	rhs$(VEC).c applu.incl npbparams.h
 setbv.o:	setbv.c applu.incl npbparams.h
 setiv.o:	setiv.c applu.incl npbparams.h
 setcoeff.o:	setcoeff.c applu.incl npbparams.h
-ssor$(VEC).amp_ppcg.o:	ssor$(VEC).amp_ppcg.c applu.incl npbparams.h
+ssor$(VEC).o:	ssor$(VEC).c applu.incl npbparams.h
 domain.o:	domain.c applu.incl npbparams.h
 verify.o:	verify.c applu.incl npbparams.h
 

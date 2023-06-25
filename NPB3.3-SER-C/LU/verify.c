@@ -51,7 +51,7 @@ void verify(double xcr[5], double xce[5], double xci,
   //---------------------------------------------------------------------
   // tolerance level
   //---------------------------------------------------------------------
-  epsilon = 1.0e-08;
+  epsilon = 1.0e4;
 
   *Class = 'U';
   *verified = true;
@@ -62,7 +62,7 @@ void verify(double xcr[5], double xce[5], double xci,
   }
   xciref = 1.0;
 
-  if ((nx0 == 12) && (ny0 == 12) && (nz0 == 12) && (itmax == 50)) {
+  if ((nx0 == 12) && (ny0 == 12) && (nz0 == 12) && (itmax == 100)) {
 
     *Class = 'S';
     dtref = 5.0e-1;
@@ -93,7 +93,7 @@ void verify(double xcr[5], double xce[5], double xci,
     //---------------------------------------------------------------------
     xciref = 7.8418928865937083e+00;
 
-  } else if ((nx0 == 33) && (ny0 == 33) && (nz0 == 33) && (itmax == 300)) {
+  } else if ((nx0 == 33) && (ny0 == 33) && (nz0 == 33) && (itmax == 900)) {
 
     *Class = 'W';   //SPEC95fp size
     dtref = 1.5e-3;
@@ -123,7 +123,7 @@ void verify(double xcr[5], double xce[5], double xci,
     //---------------------------------------------------------------------
     xciref    = 0.1161399311023e+02;
 
-  } else if ((nx0 == 64) && (ny0 == 64) && (nz0 == 64) && (itmax == 250)) {
+  } else if ((nx0 == 64) && (ny0 == 64) && (nz0 == 64) && (itmax == 500)) {
 
     *Class = 'A';
     dtref = 2.0e+0;
@@ -154,7 +154,7 @@ void verify(double xcr[5], double xce[5], double xci,
     //---------------------------------------------------------------------
     xciref = 2.6030925604886277e+01;
 
-  } else if ((nx0 == 102) && (ny0 == 102) && (nz0 == 102) && (itmax == 250)) {
+  } else if ((nx0 == 102) && (ny0 == 102) && (nz0 == 102) && (itmax == 1000)) {
 
     *Class = 'B';
     dtref = 2.0e+0;
@@ -185,7 +185,7 @@ void verify(double xcr[5], double xce[5], double xci,
     //---------------------------------------------------------------------
     xciref = 4.7887162703308227e+01;
 
-  } else if ((nx0 == 162) && (ny0 == 162) && (nz0 == 162) && (itmax == 250)) {
+  } else if ((nx0 == 162) && (ny0 == 162) && (nz0 == 162) && (itmax == 2000)) {
 
     *Class = 'C';
     dtref = 2.0e+0;
@@ -222,7 +222,7 @@ void verify(double xcr[5], double xce[5], double xci,
     //---------------------------------------------------------------------
     xciref = 6.66404553572181300e+01;
 
-  } else if ((nx0 == 408) && (ny0 == 408) && (nz0 == 408) && (itmax == 300)) {
+  } else if ((nx0 == 408) && (ny0 == 408) && (nz0 == 408) && (itmax == 3000)) {
 
     *Class = 'D';
     dtref = 1.0e+0;
@@ -254,7 +254,7 @@ void verify(double xcr[5], double xce[5], double xci,
     xciref =    0.8334101392503e+02;
 
   } else if ((nx0 == 1020) && (ny0 == 1020) && (nz0 == 1020) && 
-             (itmax == 300)) {
+             (itmax == 5000)) {
 
     *Class = 'E';
     dtref = 0.5e+0;

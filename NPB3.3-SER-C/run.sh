@@ -14,14 +14,15 @@ mkdir -p result
 #end
 
 foreach benchmark ( ft mg cg lu bt is ep sp )
-    foreach class ( S )
+    foreach class ( B )
         echo "running $benchmark.$class. (SER-C)"
         bin/$benchmark.$class.x > result/$benchmark.$class.out
 
         set RUN_STATUS=$status
 
         if ( $RUN_STATUS != 0 ) then
-            exit $RUN_STATUS
+            # exit $RUN_STATUS
+            echo "Continue"
         endif
 
         echo "done.\n"

@@ -443,13 +443,13 @@ void write_lu_info(FILE *fp, char class)
   int isiz1, isiz2, itmax, inorm, problem_size;
   char *dt_default;
 
-  if      (class == 'S') { problem_size = 12;  dt_default = "0.5"; itmax = 50; }
-  else if (class == 'W') { problem_size = 33;  dt_default = "1.5e-3"; itmax = 300; }
-  else if (class == 'A') { problem_size = 64;  dt_default = "2.0"; itmax = 250; }
-  else if (class == 'B') { problem_size = 102; dt_default = "2.0"; itmax = 250; }
-  else if (class == 'C') { problem_size = 162; dt_default = "2.0"; itmax = 250; }
-  else if (class == 'D') { problem_size = 408; dt_default = "1.0"; itmax = 300; }
-  else if (class == 'E') { problem_size = 1020; dt_default = "0.5"; itmax = 300; }
+  if      (class == 'S') { problem_size = 12;  dt_default = "0.5"; itmax = 100; }
+  else if (class == 'W') { problem_size = 33;  dt_default = "1.5e-3"; itmax = 900; }
+  else if (class == 'A') { problem_size = 64;  dt_default = "2.0"; itmax = 500; }
+  else if (class == 'B') { problem_size = 102; dt_default = "2.0"; itmax = 1000; }
+  else if (class == 'C') { problem_size = 162; dt_default = "2.0"; itmax = 2000; }
+  else if (class == 'D') { problem_size = 408; dt_default = "1.0"; itmax = 3000; }
+  else if (class == 'E') { problem_size = 1020; dt_default = "0.5"; itmax = 5000; }
   else {
     printf("setparams: Internal error: invalid class %c\n", class);
     exit(1);
