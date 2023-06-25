@@ -16,4 +16,4 @@ do
     echo ""
 done
 
-# ppcg --target c -R 99 --no-reschedule ssor.c
+ppcg --target c -R 90 --no-reschedule ssor.c
